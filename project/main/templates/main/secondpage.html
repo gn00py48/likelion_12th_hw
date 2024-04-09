@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/project.css' %}">
+
   <title>LIKELION 12th Django Session</title>
   <style>
     a {
@@ -11,9 +14,12 @@
     }
 
     .body-container {
-      background-color: #111;
+      background-color: #D09AFF;
       color: #fff;
       margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .navbar-container {
@@ -23,6 +29,7 @@
       gap: 40px;
       background-color: #FF9364;
       font-size: 18px;
+      width: 100%;
     }
 
     .navbar-link {
@@ -34,23 +41,42 @@
       color: #111;
     }
 
+    .content-box {
+      border: 2px solid black;
+      margin: 20px;
+      padding: 20px;
+      width: 80%;
+      text-align: center;
+    }
+
     .contents {
       font-size: 50px;
-      margin: 20px;
+      color: purple;
+    }
+
+    h1, h2, h3 {
+      color: #000;
     }
   </style>
 </head>
 
 <body class="body-container">
-  <div>
+  <div class="content-box">
     <nav class="navbar-container">
-      <!-- mainpage 링크 연결 -->
-      <a class="navbar-link" href="{% url 'mainpage' %}">DGU_likelion_12th</a> 
-      <!-- secondpage 링크 연결 -->
+      <a class="navbar-link" href="{% url 'mainpage' %}">DGU_likelion_12th</a>
       <a class="navbar-link" href="{% url 'secondpage' %}">Second Page</a>
     </nav>
-    <div class="contents">Welcome Django!</div>
-    <div class="contents">This is Second Page</div>
+    <div class="contents"><strong>나는 강근우다!</strong></div>
+    <div class="contents">This is Jagisogae Page</div>
+    <h1>내 이름은 강근우</h1>
+    <h2>나는 항상 배고프다 !</h2>
+    <div>
+      <img src="{% static 'images/초코나무숲.jpg' %}" alt="logo" width="100px">
+    </div>
+    <h3>
+      나의 사랑 초코나무 숲이 단종됐다. 너무 슬프다. 😢
+    </h3>
+  </div>
 </body>
 
 </html>

@@ -27,7 +27,7 @@
       align-items: center;
       padding-left: 20px;
       gap: 40px;
-      background-color: #FF9364;
+      background-color: #FFFFFF;
       font-size: 18px;
       width: 100%;
     }
@@ -63,8 +63,10 @@
 <body class="body-container">
   <div class="content-box">
     <nav class="navbar-container">
-      <a class="navbar-link" href="{% url 'mainpage' %}">DGU_likelion_12th</a>
-      <a class="navbar-link" href="{% url 'secondpage' %}">Second Page</a>
+        <!-- mainpage 링크 연결 -->
+      <a class="navbar-link" href="{% url 'mainpage' %}">Django_MTV_내용정리{{generation}}</a> 
+      <!-- secondpage 링크 연결 -->
+      <a class="navbar-link" href="{% url 'secondpage' %}">자기소개_페이지</a>
     </nav>
     <div class="contents"><strong>나는 강근우다!</strong></div>
     <div class="contents">This is Jagisogae Page</div>
